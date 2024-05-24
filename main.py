@@ -12,7 +12,8 @@ content=request.json()
 body=" "
 for article in content["articles"][:20]:
     if article["title"] is not None:
-        body ="Subject: NEWS "+"\n"+ body + article["title"]   + "\n" + article["description"] + article["url"] + 2 * "\n"
+        body ="Subject: NEWS "\
+              +"\n"+ body + article["title"] + "\n" + article["description"] + article["url"] + 2 * "\n"
 
 
 body=body.encode("utf-8")
